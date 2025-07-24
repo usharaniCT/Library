@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Members</h2>
+<form method="post" class="mb-3">
+  <input name="name" placeholder="Member Name" required class="form-control mb-2">
+  <input name="email" placeholder="Email" required class="form-control mb-2">
+  <button type="submit" class="btn btn-success">Add Member</button>
+</form>
+<table class="table table-bordered">
+  <tr><th>ID</th><th>Name</th><th>Email</th></tr>
+  {% for member in members %}
+  <tr><td>{{ member[0] }}</td><td>{{ member[1] }}</td><td>{{ member[2] }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

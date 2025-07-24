@@ -1,0 +1,19 @@
+{% include 'header.html' %}
+<h3>Report - Transactions</h3>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+<table>
+    <tr>
+        <th>ID</th><th>Book</th><th>Member</th><th>Date</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% include 'footer.html' %}

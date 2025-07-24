@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Issue / Return</h2>
+<form method="post" class="mb-3">
+  <input name="book_id" placeholder="Book ID" class="form-control mb-2">
+  <input name="member_id" placeholder="Member ID" class="form-control mb-2">
+  <select name="action" class="form-control mb-2">
+    <option value="issue">Issue</option>
+    <option value="return">Return</option>
+  </select>
+  <input name="transaction_id" placeholder="Transaction ID (for return)" class="form-control mb-2">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<table class="table table-bordered mt-4">
+  <tr><th>ID</th><th>Book</th><th>Member</th><th>Issue Date</th><th>Due Date</th><th>Return Date</th><th>Fine</th></tr>
+  {% for t in transactions %}
+  <tr>
+    <td>{{ t[0] }}</td><td>{{ t[1] }}</td><td>{{ t[2] }}</td>
+    <td>{{ t[3] }}</td><td>{{ t[4] }}</td><td>{{ t[5] }}</td><td>{{ t[6] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

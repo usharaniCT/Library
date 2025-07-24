@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Library Management System</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class="container">
+        <h2>Welcome, {{ session['user'] }}</h2>
+        <p>Select an option below to manage the library:</p>
+
+        <div class="menu">
+            <a href="/books" class="btn"> Manage Books</a>
+            <a href="/members" class="btn"> Manage Members</a>
+            <a href="/issue" class="btn"> Issue Book</a>
+            <a href="/return" class="btn">Return Book</a>
+            <a href="/report" class="btn">View Report</a>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>
