@@ -1,0 +1,12 @@
+# .gitattributes
+
+# Enforce consistent line endings
+* text=auto
+
+# Always use LF for Python and text files
+*.py text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
