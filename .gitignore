@@ -1,0 +1,4 @@
+git add .gitattributes
+git commit -m "Add .gitattributes to enforce line endings"
+git rm --cached -r .
+git reset --hard
